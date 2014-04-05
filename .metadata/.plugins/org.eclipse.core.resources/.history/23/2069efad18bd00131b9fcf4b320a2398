@@ -1,0 +1,12 @@
+/**
+ * @author Joseph Richardson
+ */
+var newUser=
+{
+	firstName : "", 
+	lastName : "",
+	email : "",
+	isMentor : false,
+	isMentee : false,
+	
+};

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="JavaScriptFunctionsLoginRegister"></script>
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+</head>
+
+<body>
+
+	<h1>My Web Page</h1>
+
+	<div id = "login" >
+		<p>Login:  </p>
+	</div>
+	
+	<div id = "register" >
+		<p>Register:  </p>
+	</div>
+	
+	<button type="button" onclick="myFunction()">Login</button>
+	<br />
+	<button type="button" onclick="myFunction()">Register</button>
+
+</body>
+</html>
