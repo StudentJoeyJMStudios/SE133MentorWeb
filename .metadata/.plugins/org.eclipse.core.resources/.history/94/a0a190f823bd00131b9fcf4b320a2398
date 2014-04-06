@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script src="JavaScriptFunctionsLoginRegister"></script>
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+</head>
+
+<body>
+
+	<h1>Welcome to Mentor Web</h1>
+
+	<div id = "login" >
+		<form username="">
+		Username: <input type="text" name="username"><br>
+		Password: <input type="password" name="password"><br>
+		<input type="submit" value="Submit">
+		</form>
+	</div>
+	
+	
+	
+	<button type="button" onclick="myFunction()">Login</button>
+	<br />
+	<button type="button" onclick="myFunction()">Register</button>
+
+</body>
+</html>

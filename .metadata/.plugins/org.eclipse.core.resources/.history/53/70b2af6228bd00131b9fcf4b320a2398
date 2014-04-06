@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<script type="text/javascript">
+	Parse.initialize("eBuYMHtEfY5emBFuHzQWHDjdxRsxxw3NQIQlrl9g", "cJeb591BLAskGN9bXsgPbY1c7uxdind30MfJUMPU");
+    
+	function login()
+	{
+		 
+		var username = document.loginInfo.username.value;
+		var password = document.loginInfo.password.value;
+		//alert("hello!" + username + "\nPassword: " + password);
+		Parse.User.logIn(username, password,
+		{
+		  	success: function(user) 
+		  	{
+		    	alert("Success");
+		  	},
+		  	error: function(user, error) 
+		  	{
+		    alert("FAIL");
+		  	}
+		});
+		
+	};
+</script>
+
+</script>
+</head>
+
+<body>
+
+	<h1>Welcome to Mentor Web</h1>
+	
+	<div id = "login" >
+		<form name="loginInfo">
+			Username: <input type="text" name="username"><br>
+			Password: <input type="password" name="password"><br>
+			<input type="submit" value="Submit" onclick="login()">
+		</form>
+	</div>
+	
+	<br />
+	<button type="button" onclick="">Register</button>
+
+</body>
+</html>

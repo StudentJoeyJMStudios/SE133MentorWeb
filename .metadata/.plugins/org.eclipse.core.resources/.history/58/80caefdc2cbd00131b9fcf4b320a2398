@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<title>Register</title>
+<head>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+<script type="text/javascript">
+	//Parse.initialize("eBuYMHtEfY5emBFuHzQWHDjdxRsxxw3NQIQlrl9g", "cJeb591BLAskGN9bXsgPbY1c7uxdind30MfJUMPU");
+    
+	function Register()
+	{
+		alert("Username: " + document.register.username.value 
+		+ "\nPassword:" + docment.register.passord.value
+		+ "\nRE - Password:" + document.register.rePassword.value
+		+ "\nemail: " + document.register.email.value);
+		
+		var user = new Parse.User();
+		user.set("username", document.register.username.value);
+		user.set("password", "my pass");
+		user.set("email", "email@example.com");
+ 
+		// other fields can be set just like with Parse.Object
+
+ 
+		user.signUp(null, 
+			{
+			  success: function(user) 
+			  {
+			    alert("New User: ");
+			  },
+			  error: function(user, error) 
+			  {
+			    // Show the error message somewhere and let the user try again.
+			    alert("Error: " + error.code + " " + error.message);
+			  }
+		});
+		
+		
+		
+	};
+</script>
+
+</script>
+</head>
+
+<body>
+
+	<h1>Register</h1>
+	
+	<div id = "register" >
+		<form name="registerInfo">
+			Username: <input type="text" name="username"><br /><br />
+			Password: <input type="text" name="password"><br />
+			Re -type Password: <input type="text" name="rePassword"><br /><br />
+			Email: <input type="text" name="email"><br />
+			<input type="checkbox" name="typeOfUser" value="Mentor">I want to be a Mentor<br>
+			<input type="checkbox" name="typeOfUser" value="Mentee">I want to be a Mentee<br /><br />
+			<input type="submit" value="Submit" onclick="Register()">
+		</form>
+	</div>
+	
+	<br />
+	<a href="MainMenu.html">Register</a>
+
+</body>
+</html>

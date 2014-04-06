@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;MentorWeb/RegisterNewUser&apos; to &apos;RegisterNewUser.js&apos;" description="Rename resource &apos;RegisterNewUser&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="RegisterNewUser" name="RegisterNewUser.js" stamp="1396747225117" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;MentorWeb/RgisterNewUser.js&apos; to &apos;RgisterNewUser.html&apos;" description="Rename resource &apos;RgisterNewUser.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="RgisterNewUser.js" name="RgisterNewUser.html" stamp="1396747357624" updateReferences="true"/>
+</session>
