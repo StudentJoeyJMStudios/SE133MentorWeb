@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<title>Login</title>
+<html>
+<head>
+	<script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+<script type="text/javascript" src="JavaScriptLoginRegister.js">
+	//Parse.initialize("eBuYMHtEfY5emBFuHzQWHDjdxRsxxw3NQIQlrl9g", "cJeb591BLAskGN9bXsgPbY1c7uxdind30MfJUMPU");
+    
+	function login()
+	{
+		 
+		var username = document.loginInfo.username.value;
+		var password = document.loginInfo.password.value;
+		//alert("hello!" + username + "\nPassword: " + password);
+		// Parse.User.logIn(username, password,
+		// {
+		  	// success: function(user) 
+		  	// {
+		    	// alert("Success");
+		  	// },
+		  	// error: function(user, error) 
+		  	// {
+		    // alert("FAIL");
+		  	// }
+		// });
+		login(username, password);
+		
+	};
+</script>
+
+
+</head>
+
+<body>
+
+	<h1>Welcome to Mentor Web</h1>
+	
+	<div id = "login" >
+		<form name="loginInfo">
+			Username: <input type="text" name="username"><br /><br />
+			Password: <input type="password" name="password"><br /><br />
+			<input type="submit" value="Submit" onclick="login()">
+		</form>
+	</div>
+	
+	<br />
+	<a href="RegisterNewUser.html">Register</a>
+
+</body>
+</html>

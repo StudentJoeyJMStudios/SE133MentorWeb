@@ -1,0 +1,41 @@
+
+Parse.initialize("eBuYMHtEfY5emBFuHzQWHDjdxRsxxw3NQIQlrl9g", "cJeb591BLAskGN9bXsgPbY1c7uxdind30MfJUMPU");
+    
+function login(username, password)
+{
+	
+		alert("hello!" + username.value + "\nPassword: " + password.value);
+		Parse.User.logIn(username, password,
+		{
+		  	success: function(user) 
+		  	{
+		    	alert("Success");
+		  	},
+		  	error: function(user, error) 
+		  	{
+		    alert("FAIL");
+		  	}
+		});
+		
+	
+}
+function Register(username, password, email)
+{
+	alert("Username: " + username + "\nPassword:" + register  + "\nemail: " + email);
+		var user = new Parse.User();
+		user.set("username", username);
+		user.set("password", password);
+		user.set("email", email);
+		
+		user.signUp(null, {
+			  success: function(user) {
+			  	alert("Success Finally!");
+			  	window.location.href = 'MainMenu.html';
+			    // Hooray! Let them use the app now.
+			  },
+			  error: function(user, error) {
+			    // Show the error message somewhere and let the user try again.
+			    alert("Error: " + error.code + "\n\nwhat is the error \n\n " + error.message);
+			  }
+		});	
+};

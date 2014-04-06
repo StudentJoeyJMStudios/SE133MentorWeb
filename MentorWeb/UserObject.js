@@ -3,12 +3,12 @@
  */
 
 //object used to create an new user to upload a new account
-var newUser(fName, lName, ema, mentor, mentee)=
-{
-	firstName : fName, 
-	lastName : lName,
-	email : ema,
-	isMentor : mentor,
-	isMentee : mentee,
-	
-};
+var firstName;
+var lastName;
+var email;
+var isMentor;
+var isMentee;
+var startDate;
+var image;
+var mainCategroy;
+var summary;
