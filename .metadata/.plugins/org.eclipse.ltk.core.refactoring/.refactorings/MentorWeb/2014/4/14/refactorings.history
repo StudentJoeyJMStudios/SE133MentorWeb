@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;MentorWeb/JavaScriptLoginRegister&apos; to &apos;JavaScriptLoginRegister.js&apos;" description="Rename resource &apos;JavaScriptLoginRegister&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="JavaScriptLoginRegister" name="JavaScriptLoginRegister.js" stamp="1396740376201" updateReferences="true"/>
-</session>
