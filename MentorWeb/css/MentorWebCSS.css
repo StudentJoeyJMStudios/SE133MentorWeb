@@ -1,9 +1,12 @@
-#myNetwork
+div 
 {
-	border:  black 4px solid;
+	-webkit-column-count:3; /* Chrome, Safari, Opera */
+-moz-column-count:3; /* Firefox */
+column-count:3;
 }
 #displayMentorInfo
 {
-	border:  black 4px solid;
+	border-style:solid;
+	border-width:5px;
 	
 }
