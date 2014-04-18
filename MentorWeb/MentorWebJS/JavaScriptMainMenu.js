@@ -27,15 +27,16 @@ script.type = 'text/javascript';
                 mentorImage.src = object.get('image').url();
                 mentorImage.height = 60;
                 mentorImage.width = 60;
-
+				//alert("Image class: " + mentorImage.toString + "Class object: " + object.toString);
 				var firstName = object.get('firstName');
 				var lastName = object.get('lastName');
 				var imageString = mentorImage;
-                var label = "\nFirst Name: " + firstName +
-                    "\nLast Name: " + lastName + "\n";
+                var label = "<br />First Name: " + firstName +
+                    "<br />Last Name: " + lastName + "<br /><br /><br />";
 
 				$('#myNetwork').append( mentorImage);
                 document.querySelector('#myNetwork').innerHTML += label; 
+                displayInfo(1,1);
 
             }
         },
@@ -45,6 +46,12 @@ script.type = 'text/javascript';
         }
     });
 })();
+
+function displayInfo(arrayOfMentors, indexOfSelectedMentor)
+{
+	$('#displayMentorInfo').append( "working");
+	
+}
 
 
 
