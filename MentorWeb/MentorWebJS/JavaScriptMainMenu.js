@@ -31,8 +31,8 @@ script.type = 'text/javascript';
 				var firstName = object.get('firstName');
 				var lastName = object.get('lastName');
 				var imageString = mentorImage;
-                var label = "\nFirst Name: " + firstName +
-                    "\nLast Name: " + lastName + "\n";
+                var label = "<br />First Name: " + firstName +
+                    "\nLast Name: " + lastName + "<br />";
 
 				$('#myNetwork').append( mentorImage);
                 document.querySelector('#myNetwork').innerHTML += label; 
