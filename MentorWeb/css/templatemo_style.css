@@ -177,13 +177,13 @@ h6 { font-size: 10px; margin: 0 0 5px; padding: 0; }
 }
 #templatemo_content #social.active {
 }
-#templatemo_content #portfolio { 
+#templatemo_content #Search { 
 }
-#templatemo_content #portfolio.active { 
+#templatemo_content #Search.active { 
 }
-#templatemo_content #contact {
+#templatemo_content #profile {
 }
-#templatemo_content #contact.active {
+#templatemo_content #profile.active {
 	margin-right: 0px;	
 }
 
