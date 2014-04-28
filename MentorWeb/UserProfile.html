@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<title>User Profile</title>
+<head>
+
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+<script type="text/javascript" src="JavaScriptLoginRegister.js"></script>
+    
+
+
+</head>
+
+<body>
+
+	<h1 align="center">Edit Your Profile</h1>
+	
+	<div id = "editProfile" >
+		<form name="profileInfo">
+			New Username: <input type="text" name="username"><br />
+			New Password: <input type="text" name="password"><br />
+			Re-type Password: <input type="text" name="rePassword"><br /><br />
+			Email: <input type="text" name="email"><br />
+			<input type="checkbox" name="typeOfUserMentor" value="Mentor">I want to be a Mentor<br>
+			<input type="checkbox" name="typeOfUserMentee" value="Mentee">I want to be a Mentee<br /><br />
+			<input type="file" id="fileInput" onchange="getImage()">
+			What Skills do you have:
+			<select id = "skills">
+               <option value = "1">one</option>
+               <option value = "2">two</option>
+               <option value = "3">three</option>
+               <option value = "4">four</option>
+             </select>
+			
+			
+			
+			<textarea rows="6" cols="50">
+				Describe yourself.
+			</textarea>
+			<input type="submit" value="Submit">
+		</form>
+		<div id="fileDisplayArea"></div>
+	</div>
+	
+	<br />
+	
+
+</body>
+<script type="text/javascript">
+	
+function getImage() 
+{
+	var files = document.getElementById("fileInput").files;
+	for (var i = 0; i < files.length; i++)
+    	alert(files[i].name);
+	
+	
+	alert("onload working");
+    var fileInput = document.getElementById("fileInput");
+    var fileDisplayArea = document.getElementById("fileDisplayArea");
+
+    fileInput.addEventListener('change', function(e) 
+    {
+    		alert("event listener working");
+      // Put the rest of the demo code here.
+      	var file = fileInput.files[0];
+		var imageType = /image.*/;
+
+		if (file.type.match(imageType)) 
+		{
+  				var reader = new FileReader();
+
+  				reader.onload = function(e) 
+  				{
+	    			fileDisplayArea.innerHTML = "";
+	
+	    			// Create a new image.
+	   				 var img = new Image();
+	   				 // Set the img src property using the data URL.
+	    			img.src = reader.result;
+	
+	    			// Add the image to the page.
+	    			fileDisplayArea.appendChild(img);
+  				};
+
+		  reader.readAsDataURL(file); 
+		} 
+		else 
+		{
+		  fileDisplayArea.innerHTML = "File not supported!";
+		}
+	});
+};
+</script>
+
+</html>

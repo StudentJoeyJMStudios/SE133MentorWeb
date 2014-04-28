@@ -4,19 +4,31 @@
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
-<script type="text/javascript" src="MentorWebJS/JavaScriptMainMenu.js">
+	<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
 
 
-</script>
-<link href="MentorWebCSS.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
 	<h1 align="center">Your Network!</h1>
-	
+	<div id="hangout"></div>
 	<div id="myNetwork" style=" float: left; width:300px; color:#0000FF;" ></div>
 	<div id ="displayMentorInfo"  style="float: right; width:200px; color:#FF0000;"></div>
+	
+
 
 </body>
+<script type="text/javascript" src="MentorWebJS/JavaScriptMainMenu.js">
+	gapi.hangout.render('hangout', {
+    'topic': 'cats',
+    'render': 'createhangout',
+    'hangout_type': 'onair',
+    'initial_apps': [{'app_id' : 'AIzaSyByDiwi_Asyvc6geenUFU5O5r44TotKVak', 'start_data' : 'dQw4w9WgXcQ', 'app_type' : 'ROOM_APP' }],
+    'widget_size': 72
+  });
+
+
+</script>
 </html>
