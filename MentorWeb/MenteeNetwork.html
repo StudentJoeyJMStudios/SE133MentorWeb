@@ -2,6 +2,24 @@
 	<title>Network</title>
 <html>
 <head>
+	<!-- Run in full-screen mode. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+ 
+        <!-- Make the status bar black with white text. -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 
+        <!-- Customize home screen title. -->
+        <meta name="apple-mobile-web-app-title" content="MentorWeb">
+ 
+        <!-- Disable phone number detection. -->
+        <meta name="format-detection" content="telephone=no">
+ 
+        <!-- Set viewport. -->
+        <meta name="viewport" content="initial-scale=1">
+ 
+        <!-- Prevent text size adjustment on orientation change. -->
+        <style>html { -webkit-text-size-adjust: 100%; }</style>
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
 	<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
@@ -13,21 +31,23 @@
 
 <body>
 	<h1 align="center">Your Network!</h1>
-	<div id="hangout"></div>
-	<div id="myNetwork" style=" float: left; width:300px; color:#0000FF;" ></div>
-	<div id ="displayMentorInfo"  style="float: right; width:200px; color:#FF0000;"></div>
+	
+	<div id="myNetwork" style=" float: left; width:300px; " ></div>
+	<div id ="displayMentorInfo"  style="position:fixed; left: 300px;  ">
+		
+				
+	</div>
+	<div id="messageKiwi" align="bottom">
+		
+		<iframe src="https://kiwiirc.com/client/irc.kiwiirc.com/?nick=MentorWeb|?#your_channel" style="border:0; width:285px; height:200px;"></iframe>
+
+	</div>
 	
 
 
 </body>
 <script type="text/javascript" src="MentorWebJS/JavaScriptMainMenu.js">
-	gapi.hangout.render('hangout', {
-    'topic': 'cats',
-    'render': 'createhangout',
-    'hangout_type': 'onair',
-    'initial_apps': [{'app_id' : 'AIzaSyByDiwi_Asyvc6geenUFU5O5r44TotKVak', 'start_data' : 'dQw4w9WgXcQ', 'app_type' : 'ROOM_APP' }],
-    'widget_size': 72
-  });
+	
 
 
 </script>

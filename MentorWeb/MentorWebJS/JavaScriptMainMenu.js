@@ -52,7 +52,7 @@ window.onload = function initializeMentorWebInformation()
 				var label = "<br>First Name: " + firstName +"<br >Last Name: " + lastName + "<br /><br /><br /><br /><br />";
 				//create string to display content
 				var buttonName = i;
-				$('#myNetwork').append( "<button name = "+ buttonName+" class = 'getMentor' type='submit' onclick = 'displayInfo( this , event )'><img src= "+url+ " height='60' width = '60' /></button>");
+				$('#myNetwork').append( "<button name = "+ buttonName+" class = 'getMentor' type='submit' onclick = 'displayInfo( this , event )'><img src= "+url+ " height='100' width = '100' /></button>");
 				//display content to iframe MenteeNetwork.html
 				
                 document.querySelector('#myNetwork').innerHTML += label;
@@ -85,9 +85,9 @@ function userProfileInfo()//function to display user's profile information in th
 	
 	var label = "<br>First Name: " + firstName +"<br >Last Name: " + lastName + "<br />";
 	
-	//$('#userProfileInfo').innerHTML = "what the fluck";
+
 	document.querySelector('#userProfileInfo').append(label );
-	//document.querySelector('#userProfileInfo').innerHTML = label ;
+	
 }
 function displayInfo( eventType, event)//when user selects what mentor they want to look at then need to get mentor from global array and gather information to display
 {
@@ -110,30 +110,11 @@ function displayInfo( eventType, event)//when user selects what mentor they want
 	
 	var description = "<br>" + firstName + "<br>" + lastName + "<br><br>Background: " + background  ;
 	
-	// <g:hangout render="createhangout" initial_apps="[{ app_id : '184219133185', start_data : 'dQw4w9WgXcQ', 'app_type': 'ROOM_APP' }]"></g:hangout>
-	
-	
-	
 	$('#displayMentorInfo').append( "<img src= "+url+ " height='135' width = '150' />");
 	
 	document.querySelector('#displayMentorInfo').innerHTML += description;
 		
 }
-
-//google hangout into an iframe possibly
-function googleHangoutFunction()
-{
-	//+ "<br><br><g:hangout render='createhangout' initial_apps='[{ app_id : " + 
-	//			GOOGLE_APP_ID + ", start_data : 'dQw4w9WgXcQ', 'app_type': 'ROOM_APP' }]'>mm</g:hangout>" + googleHangoutFunction()
-	gapi.client.setApiKey(GOOGLE_APP_ID);
-	gapi.client.load('hangouts', 'v1', null);
-	googleHangout.gapi.hangout.render('hangout', {
-    'render': 'createhangout',
-    'initial_apps': [{'app_id' : GOOGLE_APP_ID, 'start_data' : 'hangout', 'app_type' : 'ROOM_APP' }],
-    'widget_size': 175
-  });
-}
-
 
 //http://stackoverflow.com/questions/19538311/how-can-i-integrate-a-video-conferencing-solution-using-google-hangout-api
 //http://vsee.com/api  downloaded something too
